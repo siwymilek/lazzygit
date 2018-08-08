@@ -12,6 +12,7 @@
 | git init     | lg i             |
 | git status   | lg s             |
 | git pull     | lg pl            |
+| git push     | lg ps            |
 | git branch   | lg b             |
 | git commit   | lg cm            |
 | git add      | lg a             |

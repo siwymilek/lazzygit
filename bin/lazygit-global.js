@@ -5,6 +5,7 @@ const args = process.argv.slice(3, process.argv.length).map(arg => arg.match(/\s
 const cmd = process.argv[2];
 const commands = {
     'i': 'init',
+    'ps': 'push',
     's': 'status',
     'pl': 'pull',
     'b': 'branch',
