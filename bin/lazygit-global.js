@@ -4,7 +4,7 @@ const args = process.argv.slice(3, process.argv.length).map(arg => arg.match(/\s
 
 const cmd = process.argv[2];
 const commands = {
-    'i' : 'init',
+    'i': 'init',
     's': 'status',
     'pl': 'pull',
     'b': 'branch',
@@ -12,7 +12,14 @@ const commands = {
     'a' : 'add',
     'l' : 'log',
     'd' : 'diff',
-    'r' : 'reset'
+    'r' : 'reset',
+    'm' : 'merge',
+    'co' : 'checkout',
+    'ss' : 'stash',
+    'cl' : 'clone',
+    't' : 'tag',
+    'rmt' : 'remote',
+    'apl' : 'apply'
 };
 
 if(Object.keys(commands).indexOf(cmd) !== -1) {
