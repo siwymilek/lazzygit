@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+const VERSION = '1.0.4';
+
 const proc = require('../index');
 const args = process.argv.slice(3, process.argv.length).map(arg => arg.match(/\s+/) ? `"${arg}"` : arg);
 
@@ -25,9 +27,13 @@ const commands = {
 
 const commandsList = Object.keys(commands);
 
-if(commandsList.indexOf(cmd) !== -1) {
+if(['--version', '-v'].indexOf(cmd) !== -1) {
+    console.log(`Version: ${VERSION}`);
+} else if(commandsList.indexOf(cmd) !== -1) {
     proc.exec(commands[cmd], args);
 } else if(cmd === 'random') {
     const randomCmd = commandsList[Math.floor((Math.random() * commandsList.length) + 0)];
     proc.exec(commands[randomCmd], args);
+} else {
+    console.log('Unknown command');
 }
