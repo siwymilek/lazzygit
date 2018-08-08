@@ -1,6 +1,6 @@
 {
   "name": "lazzygit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "lazzygit git awesome alias",
   "main": "index.js",
   "scripts": {

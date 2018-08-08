@@ -23,6 +23,11 @@ const commands = {
     'apl' : 'apply'
 };
 
-if(Object.keys(commands).indexOf(cmd) !== -1) {
+const commandsList = Object.keys(commands);
+
+if(commandsList.indexOf(cmd) !== -1) {
     proc.exec(commands[cmd], args);
+} else if(cmd === 'random') {
+    const randomCmd = commandsList[Math.floor((Math.random() * commandsList.length) + 0)];
+    proc.exec(commands[randomCmd], args);
 }
